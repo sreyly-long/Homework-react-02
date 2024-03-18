@@ -3,8 +3,8 @@ import Cards from "./Cards";
 const ContentComponent = () => {
     return (
         <section>
-            <section className="flex gap-10">
-                <nav className="mt-[60px] bg-white border-gray-200 dark:bg-gray-900">
+            <section className=" gap-10 ">
+                {/* <nav className="mt-[60px] bg-white border-gray-200 dark:bg-gray-900">
                     <div className="  hidden  md:flex md:w-auto md:order-1" id="navbar-user">
                         <ul className="m-5 gap-4 font-medium md:p-0  border border-gray-100 rounded-lg bg-gray-50 md:space-x-8  md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                             <li className="pl-8 ">
@@ -28,9 +28,9 @@ const ContentComponent = () => {
 
                         </ul>
                     </div>
-                </nav>
+                </nav> */}
                 <section className="  ">
-                    <div className="navbar bg-base-100">
+                    <div className="navbar">
                         <div className="navbar-start">
                             <a className="btn btn-ghost text-xl">Projects</a>
                         </div>
@@ -57,7 +57,7 @@ const ContentComponent = () => {
                             In Progess <br />4
                         </button>
                     </section>
-                    <section className="flex mt-5 gap-5">
+                    <section className="flex mt-5 gap-5 justify-center">
                         <Cards />
                         <Cards />
                         <Cards />

@@ -2,8 +2,9 @@ const Cards = () => {
     return(
         <>
          {/* Cards */}
-           <div className="gap-5 w-[200px] max-w-sm bg-white border border-gray-200 rounded-[20px] shadow dark:bg-gray-800 dark:border-gray-700">
-               <div className="flex justify-end px-4 pt-4">
+           <div className="gap-5 h-[240px] w-[200px] max-w-[200px] bg-white border border-gray-200 rounded-[20px] shadow dark:bg-gray-800 dark:border-gray-700">
+               <div className="flex pt-4 justify-between">
+                    <small className="font-small mt-2 text-gray-500 ml-2">12-12-2022</small>
                    <button id="dropdownButton" data-dropdown-toggle="dropdown" className="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
                        <span className="sr-only">Open dropdown</span>
                        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
@@ -25,15 +26,16 @@ const Cards = () => {
                        </ul>
                    </div>
                </div>
-               <div class="flex flex-col  pb-10">
+               <div class="flex flex-col  pb-10 ml-2">
                     <p>ABA</p>
                    <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Web Designing</h5>
-                   <button className=" py-1 text-center text-sm rounded-lg inline-flex items-center dark:text-blue-500 bg-pink-100 text-red-500">Full Time</button>
+                   <button className="flex"><small>See details</small></button>
                    <hr className="w-full h-px bg-gray-200 border-0 dark:bg-gray-700 mt-5"/>
+                   <div className="">
+                <button className=" float-right mt-5 mr-1 rounded-xl bg-purple-500 px-5 p-[10px] text-center text-sm  text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 flex"><small><b>See Detail</b></small></button>
                </div>
-               <div className="flex float-right ml-[10px] mb-5">
-                <button className="pb-15 rounded-lg bg-purple-500 px-5 py-1 text-center text-sm font-[30px] text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 flex m-r">See Detail</button>
                </div>
+           
            </div>
        </>
 
