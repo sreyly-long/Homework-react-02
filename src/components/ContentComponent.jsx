@@ -58,9 +58,22 @@ const ContentComponent = () => {
                         </button>
                     </section>
                     <section className="flex mt-5 gap-5 justify-center">
-                        <Cards />
-                        <Cards />
-                        <Cards />
+                        <Cards  
+                            title="ABA"
+                            description="Web Design"
+                            butt="Full time"
+            
+                        />
+                        <Cards
+                            title="APD"
+                            description="Mobile App"
+                            butt="Part time"
+                         />
+                        <Cards 
+                            title="KOSIGN"
+                            description="UX-UI Design"
+                            butt="Freelance"
+                        />
 
                     </section>
                 </section>
