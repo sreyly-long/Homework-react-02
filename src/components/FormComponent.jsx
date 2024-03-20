@@ -1,10 +1,10 @@
 
 'use client';
 
-import { Button, Checkbox, Label, Modal, Select, TextInput } from 'flowbite-react';
+import { Button,Label, Modal, Select, TextInput } from 'flowbite-react';
 import { useState } from 'react';
 
-function FormComponent() {
+function FormComponent({onAddCard}) {
   const [openModal, setOpenModal] = useState(false);
   const [email, setEmail] = useState('');
 
@@ -12,9 +12,26 @@ function FormComponent() {
     setOpenModal(false);
     setEmail('');
   }
+
+  function onCloseModal() {
+    setOpenModal(false);
+    setEmail('');
+  }
+
+  const handleSubmit = () => {
+    const newCard = {
+      position: email,
+      company: '',
+      type: '',
+      startDate: '',
+      endDate: '',
+      description: '',
+    };
+    onAddCard(newCard);
+  };
   return (
     <>
-      <Button onClick={() => setOpenModal(true)} className="text-black ">ADD NEWPROJECT</Button>
+      <Button onClick={() => setOpenModal(true)} className='text-black'>ADD NEWPROJECT</Button>
       <Modal show={openModal} size="md" onClose={onCloseModal} popup>
         <Modal.Header />
         <Modal.Body>
@@ -50,7 +67,8 @@ function FormComponent() {
                 <Label htmlFor="password" value="Type" />
               </div>      
               <Select 
-               
+                 
+                
               />
             
             </div>
@@ -91,7 +109,7 @@ function FormComponent() {
             </div>
             {/* <!-- Submit Button--> */}
             <div className="w-full">
-              <button className="btn bg-blue-400 text-white hover:bg-blue-500">
+              <button className="btn bg-blue-400 text-white hover:bg-blue-500" onClick={handleSubmit}>
                 Submit
               </button>
             </div>

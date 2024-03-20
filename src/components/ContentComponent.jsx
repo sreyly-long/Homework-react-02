@@ -1,6 +1,9 @@
 import Cards from "./Cards";
 import FormComponent from "./FormComponent";
 const ContentComponent = () => {
+    const addCard = (newCard)=>{
+        setCards([...cards, newCard]);
+      }
     return (
             <section className=" gap-10 ">
                 <section className="  ">
@@ -8,9 +11,9 @@ const ContentComponent = () => {
                         <div className="navbar-start">
                             <a className="btn btn-ghost text-xl">Projects</a>
                         </div>
-                        <div className="navbar-end " data-dropdown-toggle="dropdown">                   
-                                <FormComponent/>                         
-                        </div>
+                        <button className="navbar-end " data-dropdown-toggle="dropdown">                   
+                                <FormComponent onAddCard={addCard}/>                         
+                        </button>
                     </div>
                     {/* button for finish project */}
                     <section className="gap-5 flex justify-center">
@@ -45,7 +48,7 @@ const ContentComponent = () => {
                         <Cards 
                             title="KOSIGN"
                             description="UX-UI Design"
-                            butt="Freelance"
+                            butt="Full time"
                         />
                     </section>
                 </section>
