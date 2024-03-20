@@ -30,7 +30,7 @@ const Cards = (props) => {
                <div class="flex flex-col  pb-10 ml-2 mt-2">
                     <p className="text-gray-800">{title}</p>
                    <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white"><b>{description}</b></h5>
-                   <button className="flex">{butt}</button>
+                   <button className="flex ">{butt}</button>
                    <hr className="w-full h-px bg-gray-200 border-0 dark:bg-gray-700 mt-5"/>
                    <div>
                 <button className=" float-right mt-5 mr-1 rounded-xl bg-purple-500 px-5 p-[10px] text-center text-sm  text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 flex"><small><b>See Detail</b></small></button>
