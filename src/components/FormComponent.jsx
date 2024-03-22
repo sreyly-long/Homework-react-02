@@ -1,10 +1,10 @@
 
 'use client';
 
-import { Button,Label, Modal, Select, TextInput } from 'flowbite-react';
+import { Label, Modal, Select, TextInput } from 'flowbite-react';
 import { useState } from 'react';
 
-function FormComponent({onAddCard}) {
+function FormComponent({ onAddCard }) {
   const [openModal, setOpenModal] = useState(false);
   const [email, setEmail] = useState('');
 
@@ -31,7 +31,7 @@ function FormComponent({onAddCard}) {
   };
   return (
     <>
-      <Button onClick={() => setOpenModal(true)} className='text-black'>ADD NEWPROJECT</Button>
+      <button onClick={() => setOpenModal(true)} className=' bg-slate-400 p-3 rounded-[10px] text-black font-bold text-[15px] mr-12 hover:bg-slate-300'>ADD NEWPROJECT</button>
       <Modal show={openModal} size="md" onClose={onCloseModal} popup>
         <Modal.Header />
         <Modal.Body>
@@ -39,15 +39,14 @@ function FormComponent({onAddCard}) {
             <h3 className="text-xl font-medium text-gray-900 ">Input Your Information</h3>
             <div>
               <div className="mb-2 block">
-                <Label htmlFor="email" value="POSITION" />
+                <Label htmlFor="position" value="POSITION" />
               </div>
-              <TextInput
-                id="email"
-                placeholder="UX-UI Design"
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-                required
-              />
+                <Select id="countries" required>
+                <option>Web Design</option>
+                <option>Mobile Developer</option>
+                <option>UX/UI Design</option>
+              </Select>
+            
             </div>
             {/* <!--Company input --> */}
             <div>
@@ -65,12 +64,13 @@ function FormComponent({onAddCard}) {
             <div>
               <div className="mb-2 block">
                 <Label htmlFor="password" value="Type" />
-              </div>      
-              <Select 
-                 
-                
-              />
-            
+              </div>
+              <Select id="countries" required>
+                <option>Part time</option>
+                <option>Full time</option>
+                <option>Freelance</option>
+              </Select>
+
             </div>
             {/* Date input */}
             <div className="flex justify-around">
@@ -119,4 +119,4 @@ function FormComponent({onAddCard}) {
     </>
   );
 }
-export default FormComponent
+export default FormComponent;

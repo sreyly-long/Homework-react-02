@@ -12,6 +12,7 @@ import ppl5 from './assets/Images/ppl5.jpg'
 import ppl6 from './assets/Images/ppl6.jpg'
 
 
+
 function App() {
   const [cards, setCards] = useState([])
  
@@ -119,6 +120,8 @@ function App() {
           </div>
         </div>
       </section>
+
+      
 
     </>
   )
